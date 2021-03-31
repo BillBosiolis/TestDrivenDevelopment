@@ -34,10 +34,10 @@ jobs:
         # Path of the generated xml file
         path: target/site/jacoco/jacoco.xml
         # Github personal token to add commits to Pull Request
-        token: 
+        token: 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
         # The minimum code coverage that is required to pass for overall project
-        min-coverage-overall: # optional, default is 80
+        min-coverage-overall: 80
         # The minimum code coverage that is required to pass for changed files
-        min-coverage-changed-files: # optional, default is 80
+        min-coverage-changed-files: 80
         # Run the action in debug mode and get debug logs printed in console
-        debug-mode: # optional, default is false
+        debug-mode: false
