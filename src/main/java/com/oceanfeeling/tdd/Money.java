@@ -1,6 +1,6 @@
 package com.oceanfeeling.tdd;
 
-public abstract class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
@@ -13,12 +13,21 @@ public abstract class Money {
     public boolean equals(Object o) {
         Money otherMoney = (Money) o;
         if(otherMoney == null) return false;
-        return amount == otherMoney.amount && getClass().equals(otherMoney.getClass());
+        return amount == otherMoney.amount && currency.equals(otherMoney.currency);
     }
 
-    public abstract Money times(int amount);
+    @Override
+    public String toString() {
+        return amount + " " + currency;
+    }
 
-    public abstract String currency();
+    public Money times(int multiplier) {
+        return new Money(amount * multiplier, currency);
+    }
+
+    public String currency() {
+        return currency;
+    }
 
     static Money dollar(int amount) {
         return new Dollar(amount, "USD");
