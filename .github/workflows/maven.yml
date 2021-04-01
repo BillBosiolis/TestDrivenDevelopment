@@ -26,18 +26,7 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: shadowmoose/GHA-LoC-Badge@8c8191e02ebe2e4b4764f4711228bddcaeb88f19
       uses: shadowmoose/GHA-LoC-Badge@1.0.0
-    - name: jacoco-badge-generator
+    - name: Codecov
       # You may pin to the exact commit or the version.
-      # uses: cicirello/jacoco-badge-generator@d1bf1a14cc2a171191fb3dc5d48cd1a9f4210008
-      uses: cicirello/jacoco-badge-generator@v2.0.1
-      with:
-        # Full path, relative to the root of the repository, to the jacoco csv file, including filename
-        jacoco-csv-file: target/site/jacoco/jacoco.csv
-        # The directory for storing badges, relative to the root of the repository.
-        badges-directory: .github/badges
-        # The filename of the coverage badge.
-        coverage-badge-filename: jacoco.svg
-        # The filename of the branches coverage badge.
-        branches-badge-filename: branches.svg
-        # Controls whether or not to generate the coverage badge.
-        generate-coverage-badge: true
+      # uses: codecov/codecov-action@fcebab03f26c7530a22baa63f06b3e0515f0c7cd
+      uses: codecov/codecov-action@v1.3.1
