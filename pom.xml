@@ -6,7 +6,7 @@
 
     <groupId>com.oceanfeeling.tdd</groupId>
     <artifactId>tdd</artifactId>
-    <version>10.0</version>
+    <version>11.0</version>
 
     <properties>
         <java.version>11</java.version>
